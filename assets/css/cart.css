@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cart-contain{
+    width: 100%;
+    padding-top: 10px;
+    height: 100vh;
+    background-color: #ccc;
+    display: none;
+}
+
+
+.cart{
+    width: 100%;
+    border-radius: 10px;
+    height: 700px;
+    background-color:var(--primary-color);
+}
+
+.confimation-form{
+    height: 143px;
+}
+
+
+
+.cart-item{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cart-list,
+.cart-list-buy{
+    width: 1100px;
+    height: 90%;
+    overflow-y: scroll;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: var(--white-color);
+}
+
+.cart-list-buy{
+    margin-top: 30px;
+    padding: 0;
+    height: 60%;
+}
+
+
+
+.cart-list-item{
+    width: 100%;
+    display: flex;
+    margin-bottom: 32px;
+}
+
+.cart-img{
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.cart-description{
+    position: relative;
+    width: 825px;
+    display: flex;
+    /* flex: 1; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-sub-description{
+    width: 1000px;
+    padding: 0 30px;
+}
+
+.cart-title{
+    font-size: 2rem;
+    line-height: 30px;
+}
+
+.cart-subtitle, .cart-price, .cart-delete{
+    font-size: 1.6rem;
+    line-height: 30px;
+}
+
+.cart-buy{
+    font-size: 1.6rem;
+}
+
+.cart-price{
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.cart-delete{
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+}
+
+.cart-delete:hover{
+    color: var(--primary-color);
+}
+
+.buy-btn{
+    position: absolute;
+    bottom: 6%;
+    font-size: 2rem;
+    padding: 10px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+.buy-btn:hover{
+    background-color: #f05d41;
+    color: var(--white-color);
+}
+
+/* Phieu xac nhan */
+
+.cart-item-confirm{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.cart-list-confirm{
+    position: absolute;
+    width: 1100px;
+    height: 90%;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: var(--white-color);
+    top: 6%;
+    left: 4%;
+    
+}
+
+.title-confirm{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+
+.form-confirmation-label{
+    display: block;
+    margin-right: 40px;
+}
+
+.form-confirmation{
+    position: absolute;
+}
+
+.form-main-confirm{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+
+.form-confimation-input{
+    padding: 5px;
+    min-width: 300px;
+}
+
+.form-confimation-input-item{
+    padding: 5px;
+    min-width: 148px;
+}
+
+.form-confirmation-label{
+    margin-bottom: 10px;
+}
+
+/* price */
+
+.sum-price{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn-buy-cart{
+    font-size: 2rem;
+    background-color: var(--primary-color);
+    border: none;
+    padding: 8px 20px;
+    margin-left: 50%;
+    margin-top: 10px;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-buy-cart:hover{
+    background-color: #f05d41;
+    color: var(--white-color);
+}
+
+.cart-contain.active{
+    display: block;
+}
+
+/* close */
+.back-home{
+    position: absolute;
+    font-size: 4rem;
+    color: var(--white-color);
+    z-index: 5555;
+    top: 15px;
+    right: 175px;
+}

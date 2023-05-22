@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NS Luxury</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/css/logincss/login.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/description.css">
+    <link rel="stylesheet" href="cart.html">
+</head>
+
+<body>
+    <div class="app">
+        <header class="header" >
+            <div class="grid wide">
+                <nav class="header__navbar">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
+                            <a href="login.html" class="header-link" target="_blank">Kênh admin</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <span class="header__navbar-title--no-pointer">Kết nối</span>
+                            <a href="https://www.facebook.com/" class="header__navbar-icon-link" target="_blank">
+                                <i class="header__navbar-icon fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" class="header__navbar-icon-link" target="_blank">
+                                <i class="header__navbar-icon fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--has-notify">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fa-solid fa-bell"></i>
+                                Thông báo
+                            </a>
+                            <div class="header__notify">
+                                <header class="header__notify-header">
+                                    <h3>Thông báo mới nhận</h3>
+                                </header>
+                                <ul class="header__notify-list">
+                    
+
+                                </ul>
+                                <footer class="header__notify-footer">
+                                    <a href="#" class="header__notify-footer-btn"></a>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fa-solid fa-circle-question"></i>
+                                Trợ giúp
+                            </a>
+                        </li>
+                        <!-- <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">Đăng ký</li>
+                        <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li> -->
+                        <li class="header__navbar-item header__navbar-user">
+                            <img src="./assets/img/124.jpg" alt="" class="header__navbar-user-img">
+                            <span class="header__navbar-user-name">Thắng Hoàng</span>
+
+                            <ul class="header__navbar-user-menu">
+                                <li class="header__navbar-user-item">
+                                    <a href="">Tài khoản của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="">Ưu đãi của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="cart.html">Hóa đơn</a>
+                                </li>
+                                <li class="header__navbar-user-item header__navbar-user-item--separate">
+                                    <a href="login.html">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- header with search -->
+                
+                <div class="header-with-search">
+                    <div class="header__logo">
+                        <a href="/" class="header__logo-link">
+                            NS Luxury
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" id="form-search">
+                            <div class="auth-form__group">
+                                <input type="date" class="auth-form__input" placeholder="Ngày nhận phòng" id="checkin">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="date" class="auth-form__input" placeholder="Ngày trả phòng" id="checkout">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="number" class="auth-form__input" placeholder="Số giường" id="number-bed">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="number" class="auth-form__input" placeholder="Số người" id="number-child">
+                                <span class="form-message"></span>
+                            </div>
+                            
+                        </form>
+                        <div class="search-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+    
+                    <!-- cart layout -->
+                    <div class="header__cart">
+                        <div class="header__cart-wrap">
+                            <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                            <span class="header__cart-notice"></span>
+                            <!-- No cart :header__cart--no-cart -->
+                            <div class="header__cart-list">
+                                <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/9bdd8040b334d31946f49e36beaf32db.png" alt="" class="header__cart-no-cart-img">
+                                <span class="header__cart-list-no-cart-msg">Chưa có sản phẩm</span>
+    
+                                <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                                <ul class="header__cart-list-item">
+                                    <!--Cart-item  -->
+                                    
+                                </ul>
+    
+                                <a href="cart.html" class="header__cart-view-cart btn btn--primary" >Xem giỏ hàng</a>
+                            </div>
+                        </div>
+    
+                        
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item header__sort-item--active">
+                    <a href="" class="header__sort-link">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
+        </header>
+
+        <div class="app__container" >
+            <div class="grid wide">
+                <div class="row sm-gutter app__content">
+                    <div class="col l-2 m-0 c-0">
+                        <nav class="category">
+                            <h3 class="category-heading">
+                                <i class="category-heading-icon fa-solid fa-list"></i>
+                                Danh mục
+                            </h3>
+            
+                            <ul class="category-list">
+                                <li class="category-item category-item--active all">
+                                    <a href="#" class="category-item__link">
+                                        Tất cả
+                                    </a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">
+                                        Directview Apartment
+                                    </a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">
+                                        Beanchview Apartment
+                                    </a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">
+                                        Cityview Apartment
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="col l-10 m-12 c-12">
+                        <div class="home-filter hide-on-mobile-tablet">
+                            <span class="home-filter__label">Sắp xếp theo</span>
+                            <button class="home-filter__btn btn btn--primary">Phổ biến</button>
+                            <button class="home-filter__btn btn">Mới nhất</button>
+                            <button class="home-filter__btn btn">Phòng hot</button>
+
+                            <div class="select-input">
+                                <span class="select-input__label">Giá</span>
+                                <i class="select-input__icon fa-solid fa-chevron-down"></i>
+                                <ul class="select-input-list">
+                                    <li class="select-input__item lowprice">
+                                        <a href="#" class="select-input__link">
+                                            Giá: thấp đến cao
+                                        </a>
+                                    </li>
+                                    <li class="select-input__item highprice">
+                                        <a href="#" class="select-input__link">
+                                            Giá: Cao đến thấp
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="home-filter__page">
+                                <span class="home-filter__page-num">
+                                </span>
+
+                                <div class="home-filter__page-control">
+                                    <a href="#" class="home-filter__page-btn home-filter__page-btn--disable">
+                                        <i class="home-filter__page-icon fa-solid fa-chevron-left"></i>
+                                    </a>
+                                    <a href="#" class="home-filter__page-btn">
+                                        <i class="home-filter__page-icon fa-solid fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="home-product">
+                            <div class="row sm-gutter product">  
+                            </div>
+                                
+                        <ul class="pagination home-product__pagination">
+                            <li class="pagination-item back">
+                                <a href="#" class="pagination-item__link">
+                                    <i class="pagination-item__icon fa-solid fa-chevron-left"></i>
+                                </a>
+                            </li>
+                            <span class="list-number">
+                                
+                            </span>
+                            
+
+                            <li class="pagination-item next">
+                                <a href="#" class="pagination-item__link">
+                                    <i class="pagination-item__icon fa-solid fa-chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-modal">
+            <div class="grid wide descontain">
+                <div class="description-contain">
+                
+                    <!-- description product -->
+                    <div class="description-main">
+                        <div class="slider-contain">
+                            <div class="descripton-main-item slider">
+                                <div class="slides">
+                                    <!-- radio buttons start -->
+                                    <input type="radio" class="radio-btn" id="radio1">
+                                    <input type="radio" class="radio-btn" id="radio2">
+                                    <input type="radio" class="radio-btn" id="radio3">
+                                    <input type="radio" class="radio-btn" id="radio4">
+                                    <!-- radio buttons end -->
+                                    <!-- slide images start -->
+                                    <div class="slide-img">
+                                        
+                                    </div>
+                                    
+                                    <!-- slide images end -->
+            
+                                </div>
+                                <!-- maunal navigation start -->
+                                <div class="navigation-manual">
+                                    <label for="radio1" class="manual-btn"></label>
+                                    <label for="radio2" class="manual-btn"></label>
+                                    <label for="radio3" class="manual-btn"></label>
+                                    <label for="radio4" class="manual-btn"></label>
+                                </div>
+        
+                                <div class="share">
+                                    <div class="share-title">
+                                        <span>Share:</span>
+                                        <div class="share-icon">
+                                            <div class="share-icon-item">
+                                                <a href="https://www.facebook.com/" class="share-icon-item-link" target="_blank">
+                                                <i class="fa-brands fa-facebook"></i>
+                                                </a>
+                                            </div>
+                                            <div class="share-icon-item">
+                                                <a href="https://www.instagram.com/accounts/login/" class="share-icon-item-link" target="_blank">
+                                                <i class="fa-brands fa-square-instagram"></i>
+                                                </a>
+                                            </div>
+                                            <div class="share-icon-item">
+                                                <a href="https://www.messenger.com/login/" class="share-icon-item-link" target="_blank">
+                                                <i class="fa-brands fa-facebook-messenger"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="active-like">
+                                        <div class="like-icon">
+                                            <a href="" class="like">
+                                            <i class="fa-solid fa-heart"></i>
+                                            </a>
+                                        </div>
+                                        <div class="number-like">Yêu thích</div>
+                                    </div>
+                                </div>
+        
+                                <div class="close">
+                                    <span>Close</span>
+                                </div>
+                                <!-- maunal navigation end -->
+                            </div>
+                        </div>
+                        
+                        <div class="descripton-main-item main-des">
+                        </div>
+                        <div class="buy-product">
+                                <div class="btn-item add-cart">Thêm vào giỏ</div>
+                                <div class="btn-item buy-btn">Đặt phòng</div>
+                        </div>
+                    </div> 
+                    
+                </div> 
+            </div>
+        </div>
+
+        </div>
+
+        <footer class="footer" >
+            <div class="grid wide footer__content">
+                <div class="row">
+                    <div class="col l-2-4 m-4 c-6 ">
+                        <h3 class="footer__heading">Chăm sóc khách hàng</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-link">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-link">NS Luxury</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-link">Hướng dẫn đặt phòng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer__heading">Giới thiệu</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-link">Giới thiệu</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-link">Tuyển dụng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-link">Điều khoản</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer__heading">Danh mục</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-link">
+                                    Directview
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-link">
+                                    Beanchview
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-link">
+                                    Cityview
+                                </a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer__heading">Theo dõi</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-link">
+                                    <i class="footer-item__icon fa-brands fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-link">
+                                    <i class="footer-item__icon fa-brands fa-square-instagram"></i>
+                                    Instargram
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-link">
+                                    <i class="footer-item__icon fa-brands fa-linkedin"></i>
+                                    Linkdekin
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-8 c-12">
+                        <h3 class="footer__heading">Tải ứng dụng đặt phòng</h3>
+                        <div class="footer__download">
+                            <!-- <img src="" alt="Download QR" class="footer__download-qr"> -->
+                            <div class="footer__download-apps">
+                                <!-- <a href="" class="footer__download-apps__link">
+                                <img src="" alt="Google play" class="footer__download-app-img">
+                                </a>
+                                <a href="" class="footer__download-apps__link">
+                                <img src="" alt="App store" class="footer__download-app-img">
+                                </a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="grid wide">
+                    <p class="footer__text">© 2022 - Bản quyền thuộc về Công ty TNHH NS Luxury</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+<script src="assets/js/description.js"></script>
+<script src="/assets/js/validator.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/notification.js"></script>
+<script src="assets//js/cart.js"></script>
+<script>
+    Validator({
+            form: '#form-search',
+            errorSelector: '.form-message',
+            rules: [
+                Validator.isRequired('#checkin', ' Vui lòng nhập trường này'),
+                Validator.isRequired('#checkout', 'Vui lòng nhập trường này'),
+                Validator.isRequired('#number-bed', 'Vui lòng nhập số người lớn'),
+                Validator.isRequired('#number-child', 'Vui lòng nhập số trẻ em'),
+            ]
+        })
+
+    
+</script>
+</html>

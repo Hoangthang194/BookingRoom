@@ -1,0 +1,211 @@
+/* mobile & tablet */
+@media (max-width: 1023px){
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    .header{
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+    
+    .header__search{
+        display: none;
+    }
+
+
+    .app__container{
+        margin-top: calc(var(--header-height) + var(--header-sort-bar-height));
+    }
+
+    .header__navbar{
+        display: none;
+    }
+
+    .app__content{
+        padding-top: 8px;
+    }
+
+
+    .header__cart-list{
+        position: fixed;
+        top: var(--header-height);
+        right: 0px;
+        background-color: var(--white-color);
+        width: 100%;
+        padding: 0 calc((100% - 644px) / 2);
+    }
+
+    .header__cart-list::after{
+        display: none;
+    }
+
+    .header__sort-bar{
+        display: flex;
+    }
+
+    .mobile-category{
+        display: block;
+    }
+
+}
+
+/* tablet */
+@media (min-width: 740px) and (max-width: 1023px){
+    :root {
+        --header-height: 68px;
+        --navbar-height: 0px;
+        }
+    .hide-on-mobile{
+        display: none;
+    }
+    .header__cart{
+        width: 80px;
+        text-align: right;
+    }
+
+    .header-logo,
+    .header-state
+    {
+        font-size: 20px;
+    }
+
+    
+
+    
+
+}
+
+@media (max-width: 739px){
+    :root {
+        --header-height: 54px;
+        --navbar-height: 0px;
+        }
+    .hide-on-mobile{
+        display: none;
+    }
+
+    .header-with-search{
+        justify-content: space-between;
+    }
+
+    .header__cart{
+        width: unset;
+    }
+
+    .header__logo{
+        width: unset;
+    }
+
+    .header__mobile-search{
+        padding: 0 12px;
+    }
+
+    .header__search{
+        position: fixed;
+        top: var(--header-with-search-height);
+        left: 0;
+        right: 0;
+        height: 46px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        z-index: 9;
+        padding: 0 16px;
+        animation: mobileSearchSideIn linear 0.3s ;
+        display: none;
+    }
+
+    .header__search-history{
+        position: fixed;
+        top: calc(var(--header-height) + var(--header-sort-bar-height));
+        width: 100%;
+    }
+
+    .header-logo,
+    .header-state
+    {
+        font-size: 16px;
+    }
+
+    .header-content{
+        margin: 0 14px;
+    }
+
+    .auth-form{
+       width: 350px; 
+       margin-top: 10%;
+    }
+
+    .pagination-item__link{
+        --height: 28px;
+        font-size: 1.6rem;
+        min-width: 36px;
+    }
+
+    .pagination-item{
+        margin: 0;
+    }
+
+    .app__content{
+        margin: 0 4px;
+    }
+
+    .header__mobile-search-icon{
+        display: block;
+    }
+
+    .mobile-category{
+        display: block;
+    }
+
+    .header__logo-img{
+        width: 110px;
+    }
+
+
+    .auth-form__heading{
+        font-size: 1.4rem;
+    }
+
+    .auth-form__switch-btn{
+        font-size: 1.2rem;
+    }
+
+    .footer__content{
+        padding: 0 16px;
+    }
+
+    .footer__heading{
+        text-align: center;
+    }
+
+    .footer-item{
+        text-align: center;
+    }
+
+    .footer__download-apps{
+        flex: unset;
+    }
+
+    .footer__download{
+        justify-content: center;
+    }
+
+    .footer__download-apps__link{
+        display: block;
+        padding: 6px 8px;
+    }
+
+    @keyframes mobileSearchSideIn {
+        from{
+            top: calc(var(--header-height) / 2);
+            opacity: 0;
+        }
+        to{
+            top: var(--header-height);
+            opacity: 1;
+        }
+    }
+}
