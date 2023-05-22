@@ -54,15 +54,17 @@ const cartList = {
         var domParse = new DOMParser();
         var docs = domParse.parseFromString(data, "text/html");
         const nameCartList = docs.querySelectorAll('.header__cart-item-name');
-        
+        console.log(nameCartList)
         var arrayCart = [];
         for(var nameRoom of nameCartList){
-        homeProduct.products.map(function(product){
+        for(var product of homeProduct.products){
             if(product.code == nameRoom.textContent.trim()){
                 arrayCart.push(product)
+                break;
             }
-        })
+        }
     }
+    console.log(arrayCart)
     cartList.render(arrayCart)  
     this.delete()
 }, 

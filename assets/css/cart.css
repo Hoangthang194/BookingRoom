@@ -67,7 +67,7 @@
 
 .cart-description{
     position: relative;
-    width: 825px;
+    width: 78%;
     display: flex;
     /* flex: 1; */
     align-items: center;
@@ -214,8 +214,8 @@
 .back-home{
     position: absolute;
     font-size: 4rem;
-    color: var(--white-color);
+    color: var(--primary-color);
     z-index: 5555;
-    top: 15px;
-    right: 175px;
+    top: 35px;
+    right: 9%;
 }

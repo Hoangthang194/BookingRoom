@@ -50,7 +50,7 @@ const  notification = {
     },
     start: function(product, code, state){
         this.addNotify(product, code, state)
-        this.render()
+        this.render();
     }
 }
 
