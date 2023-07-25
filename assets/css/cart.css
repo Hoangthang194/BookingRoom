@@ -21,7 +21,7 @@
 }
 
 .confimation-form{
-    height: 143px;
+    height: 100px;
 }
 
 
@@ -48,7 +48,7 @@
 .cart-list-buy{
     margin-top: 30px;
     padding: 0;
-    height: 60%;
+    height: 65%;
 }
 
 
@@ -153,10 +153,16 @@
 .form-confirmation-label{
     display: block;
     margin-right: 40px;
+    margin-bottom: 10px;
 }
 
 .form-confirmation{
-    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
 }
 
 .form-main-confirm{
@@ -175,9 +181,6 @@
     min-width: 148px;
 }
 
-.form-confirmation-label{
-    margin-bottom: 10px;
-}
 
 /* price */
 
@@ -218,4 +221,9 @@
     z-index: 5555;
     top: 35px;
     right: 9%;
+}
+
+.back-2{
+    top: 10px;
+    right: 10px;
 }

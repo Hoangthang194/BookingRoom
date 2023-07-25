@@ -3,17 +3,19 @@ const cartListBuy = document.querySelector('.cart-list-buy:not(:active)')
 const sumPriceBuy = document.querySelector('.sum-price')
 const btnBuy = document.querySelector('.buy-btn');
 var result = [];
+var resultConfirm = [];
 var price = []
 const cartList = {
     render: function(products){
         products.map(function(product){
+            
             var html = `
             <li class="cart-list-item">
             <img src="${product.img}" alt="" class="cart-img">
             <div class="cart-description">
                 <div class="cart-sub-description">
                     <div class="cart-title">
-                        ${product.code}
+                        ${product.id}
                     </div>
                     <div class="cart-subtitle">
                         ${product.title}
@@ -22,12 +24,32 @@ const cartList = {
                 
                 <div class="cart-buy">
                     <div class="cart-price">${homeProduct.pricecur(product)}đ</div>
-                    <div class="cart-delete">Xóa</div>
+                     <div class="cart-delete">Xóa</div>
                 </div>
             </div>
             </li>
         `
         result.push(html);
+            var htmlConfirm = `
+                <li class="cart-list-item">
+                <img src="${product.img}" alt="" class="cart-img">
+                <div class="cart-description">
+                    <div class="cart-sub-description">
+                        <div class="cart-title">
+                            ${product.id}
+                        </div>
+                        <div class="cart-subtitle">
+                            ${product.title}
+                            </div>
+                    </div>
+
+                    <div class="cart-buy">
+                        <div class="cart-price">${homeProduct.pricecur(product)}đ</div>
+                    </div>
+                </div>
+                </li>
+            `
+        resultConfirm.push(htmlConfirm);
         price.push(homeProduct.pricecur(product))
         })
         var sumPrice = 0;
@@ -39,7 +61,7 @@ const cartList = {
         `
         sumPriceBuy.innerHTML= html;
         cartListParent.innerHTML = result.join('')
-        cartListBuy.innerHTML = result.join('')
+        cartListBuy.innerHTML = resultConfirm.join('')
 
         var htmlState = localStorage.getItem('STATE');
         var data = JSON.parse(htmlState);
@@ -54,17 +76,15 @@ const cartList = {
         var domParse = new DOMParser();
         var docs = domParse.parseFromString(data, "text/html");
         const nameCartList = docs.querySelectorAll('.header__cart-item-name');
-        console.log(nameCartList)
         var arrayCart = [];
         for(var nameRoom of nameCartList){
         for(var product of homeProduct.products){
-            if(product.code == nameRoom.textContent.trim()){
+            if(product.id == nameRoom.textContent.trim()){
                 arrayCart.push(product)
                 break;
             }
         }
     }
-    console.log(arrayCart)
     cartList.render(arrayCart)  
     this.delete()
 }, 
@@ -73,7 +93,7 @@ const cartList = {
         const deleteBtnBuys = document.querySelectorAll('.cart-list-buy .cart-delete')
         for(var deleteBtn of deleteBtns){
             deleteBtn.addEventListener('click', (e) => {
-                localStorage.clear()
+                // localStorage.clear()
                 if(e.target.closest('.cart-list-item')){
                     var parentBlock = e.target.closest('.cart-list-item');
                     parentBlock.remove();
@@ -106,14 +126,14 @@ const cartList = {
         for(var localCur of localCurs){
             var roomCur = localCur.querySelector('.cart-title').textContent.trim()
             var productFind = homeProduct.products.filter(function(product){
-                return roomCur == product.code;
+                return roomCur == product.id;
             })
             var cartHtml = `
                 <li class="header__cart-item">
                 <img src="${productFind[0].img}" alt="" class="header__cart-img">
                 <div class="header__cart-item-info">
                 <div class="header__cart-item-head">
-                        <h5 class="header__cart-item-name">${productFind[0].code}</h5>
+                        <h5 class="header__cart-item-name">${productFind[0].id}</h5>
                         <div class="header__cart-item-price-wrap">
                         <span class="header__cart-item-price">${homeProduct.pricecur(productFind[0])}đ</span>
                         </div>
@@ -122,7 +142,6 @@ const cartList = {
                         <span class="header__cart-item-description">
                             Phân loại: ${productFind[0].numberBed} giường
                         </span>
-                        <span class="header__cart-item-remove">Xóa</span>
                 </div>
                 </div>
                 </li>
@@ -139,14 +158,14 @@ const cartList = {
         for(var localCur of localCurs){
             var roomCur = localCur.querySelector('.cart-title').textContent.trim()
             var productFind = homeProduct.products.filter(function(product){
-                return roomCur == product.code;
+                return roomCur == product.id;
             })
             var textNotify = `
                 <li class="header__notify-item header__notify-item--viewed">
                 <a href="cart.html" class="header__notify-link">
                     <img src="${productFind[0].img}" alt="" class="header__notify-img">
                     <div class="header__notify-info">
-                        <span class="header__notify-name">${productFind[0].code} đã được ${state}</span>
+                        <span class="header__notify-name">${productFind[0].id} đã được ${state}</span>
                         <span class="header__notify-description">${productFind[0].title}</span>
                     </div>
                 </a>

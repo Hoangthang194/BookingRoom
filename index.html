@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/css/logincss/login.css">
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/grid.css">
-    <link rel="stylesheet" href="assets/css/description.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="cart.html">
+    <link rel="stylesheet" href="./assets/css/logincss/login.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/description.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/calendar.css">
 </head>
 
 <body>
@@ -24,11 +24,11 @@
                 <nav class="header__navbar">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
-                            <a href="login.html" class="header-link" target="_blank">Kênh admin</a>
+                            <a href="./AdminInterface/index.html" class="header-link" target="_blank">Kênh admin</a>
                         </li>
                         <li class="header__navbar-item">
                             <span class="header__navbar-title--no-pointer">Kết nối</span>
-                            <a href="https://www.facebook.com/" class="header__navbar-icon-link" target="_blank">
+                            <a href="https://www.facebook.com/profile.php?id=100083393889990" class="header__navbar-icon-link" target="_blank">
                                 <i class="header__navbar-icon fa-brands fa-facebook"></i>
                             </a>
                             <a href="https://www.instagram.com/" class="header__navbar-icon-link" target="_blank">
@@ -59,7 +59,7 @@
                         <li class="header__navbar-item">
                             <a href="" class="header__navbar-item-link">
                                 <i class="header__navbar-icon fa-solid fa-circle-question"></i>
-                                Trợ giúp
+                                Hỗ trợ
                             </a>
                         </li>
                         <!-- <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">Đăng ký</li>
@@ -73,13 +73,10 @@
                                     <a href="">Tài khoản của tôi</a>
                                 </li>
                                 <li class="header__navbar-user-item">
-                                    <a href="">Ưu đãi của tôi</a>
-                                </li>
-                                <li class="header__navbar-user-item">
-                                    <a href="cart.html">Hóa đơn</a>
+                                    <a href="./Partials/cart.html">Hóa đơn</a>
                                 </li>
                                 <li class="header__navbar-user-item header__navbar-user-item--separate">
-                                    <a href="login.html">Đăng xuất</a>
+                                    <a href="./Partials/login.html">Đăng xuất</a>
                                 </li>
                             </ul>
                         </li>
@@ -134,7 +131,7 @@
                                     
                                 </ul>
     
-                                <a href="cart.html" class="header__cart-view-cart btn btn--primary" >Xem giỏ hàng</a>
+                                <a href="./Partials/cart.html" class="header__cart-view-cart btn btn--primary" >Xem giỏ hàng</a>
                             </div>
                         </div>
     
@@ -261,88 +258,68 @@
                 </div>
             </div>
         </div>
-
+        <!-- Description -->
         <div class="container-modal">
-            <div class="grid wide descontain">
-                <div class="description-contain">
-                
-                    <!-- description product -->
-                    <div class="description-main">
-                        <div class="slider-contain">
-                            <div class="descripton-main-item slider">
-                                <div class="slides">
-                                    <!-- radio buttons start -->
-                                    <input type="radio" class="radio-btn" id="radio1">
-                                    <input type="radio" class="radio-btn" id="radio2">
-                                    <input type="radio" class="radio-btn" id="radio3">
-                                    <input type="radio" class="radio-btn" id="radio4">
-                                    <!-- radio buttons end -->
-                                    <!-- slide images start -->
-                                    <div class="slide-img">
-                                        
-                                    </div>
-                                    
-                                    <!-- slide images end -->
-            
-                                </div>
-                                <!-- maunal navigation start -->
-                                <div class="navigation-manual">
-                                    <label for="radio1" class="manual-btn"></label>
-                                    <label for="radio2" class="manual-btn"></label>
-                                    <label for="radio3" class="manual-btn"></label>
-                                    <label for="radio4" class="manual-btn"></label>
-                                </div>
-        
-                                <div class="share">
-                                    <div class="share-title">
-                                        <span>Share:</span>
-                                        <div class="share-icon">
-                                            <div class="share-icon-item">
-                                                <a href="https://www.facebook.com/" class="share-icon-item-link" target="_blank">
-                                                <i class="fa-brands fa-facebook"></i>
-                                                </a>
-                                            </div>
-                                            <div class="share-icon-item">
-                                                <a href="https://www.instagram.com/accounts/login/" class="share-icon-item-link" target="_blank">
-                                                <i class="fa-brands fa-square-instagram"></i>
-                                                </a>
-                                            </div>
-                                            <div class="share-icon-item">
-                                                <a href="https://www.messenger.com/login/" class="share-icon-item-link" target="_blank">
-                                                <i class="fa-brands fa-facebook-messenger"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="active-like">
-                                        <div class="like-icon">
-                                            <a href="" class="like">
-                                            <i class="fa-solid fa-heart"></i>
-                                            </a>
-                                        </div>
-                                        <div class="number-like">Yêu thích</div>
-                                    </div>
-                                </div>
-        
-                                
-                                <!-- maunal navigation end -->
-                            </div>
+            <div class="description grid wide">
+                <div class="description-main row">
+                    <section class="slider col c-8"> 
+
+                        <div class="slider-main">
                             
                         </div>
-                        
-                        <div class="descripton-main-item main-des">
+
+
+                        <div class="slider-sub row">
+                            
                         </div>
-                        <div class="buy-product">
-                                <div class="btn-item add-cart">Thêm vào giỏ</div>
-                                <div class="btn-item buy-btn">Đặt phòng</div>
+
+
+
+                    </section>
+
+                    <section class=" col c-4">
+                        <div class="description-information">
+                            <h1 class="code-room">C2119</h1>
+                            <div class="information-room-detail">
+
+                                <div class="infor-item">
+                                    <div class="title-infor">
+                                        Phục vụ
+                                    </div>
+    
+                                    <div class="sub-title">
+                                        Người lớn: 2<br>
+                                        Trẻ em: 1<br>
+                                        Tối đa: 3 ng<br>
+                                    </div>
+    
+                                </div>
+    
+                                <div class="infor-item">
+                                    <div class="title-infor">
+                                        Bố trí căn hộ
+                                    </div>
+    
+                                    <div class="sub-title">
+                                        Diện tích: 47m2<br>
+                                        Hướng view: trực diện biển<br>
+                                        Số giường:<br>
+                                        + 1 Super King size 2mx2m<br>
+                                        + Hoặc tách thành 02 giường đơn<br>
+                                    </div>
+    
+                                </div>
+
+                            </div>
                         </div>
-                        
-                    </div> 
+
+                        <div class="add-to-cart">
+                            <button class="add-cart btn-des">Thêm vào giỏ</button>
+                            <button class="buy-btn btn-des">Đặt ngay</button>
+                        </div>
+                    </section>
                 </div>
-                <div class="close">
-                    <span>Close</span>
-                </div> 
+                
             </div>
         </div>
 
@@ -449,11 +426,12 @@
     </div>
 
 </body>
-<script src="assets/js/description.js"></script>
 <script src="/assets/js/validator.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/description.js"></script>
 <script src="assets/js/notification.js"></script>
 <script src="assets//js/cart.js"></script>
+<script src="./assets/js/calendar.js"></script>
 <script>
     Validator({
             form: '#form-search',

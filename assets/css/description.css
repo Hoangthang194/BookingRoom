@@ -20,290 +20,172 @@
 }
 
 .container-modal.active{
-    display: flex;
-    justify-content: center;
-}
-
-.descontain{
-    background-color: var(--white-color);
-    padding: 32px;
-    border-radius: 10px;
-    top: calc(var(--header-height) - 90px);
-    left: 10%;
-    animation: modalFadeIn ease-in 0.2s;
-    overflow-y: scroll;
-    max-height: 100%;
+    display: block;
 }
 
 .description{
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #ccc;
+    width: 100%;
+    background-color: aliceblue;
+    padding-top: 10px;
+    overflow-y: scroll;
+    position: relative;
 }
 
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #ccc;
+}
 
 .description-main{
-    position: relative;
-    display: flex;
-}
-
-.descripton-main-item.main-des{
-    flex: 1;
-    text-align: left;
-    box-shadow: 2px 2px 5px #ccc;
-    height: 600px;
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.description-title{
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 32px;
-    color: var(--primary-color);
-}
-
-.description-product{
-    font-size: 1.6rem;
-    line-height: 20px;
-    max-height: 400px;
-    overflow-y: scroll;
     width: 100%;
-    word-wrap: break-word;
+    margin: auto;
 }
 
-
-.descripton-main-item:not(:last-child){
-    margin-right: 0px;
-}
-
-
-.descripton-main-item:not(:first-child):hover{
-    transform: scale(1.01);
-    transition: all 0.1s linear;
-}
-
-/* btn buy */
-
-/* silder */
-
-.slider-contain{
-    flex: 1;
-    padding: 20px;
-    box-shadow: 2px 2px 5px #ccc;
-    margin-right: 20px;
-    border-radius: 10px;
-}
-
-.slider-contain:hover{
-    transform: scale(1.01);
-    transition: all 0.1s ease-in;
+.description-information{
+    padding: 0 10px;
 }
 
 .slider{
-    margin-bottom: -40px;
-    position: relative;
-    height: 600px;
-    border-radius: 10px;
-    overflow: hidden;
+    box-shadow: 5px 5px 5px #ccc;
+    padding: 0;
+    padding-bottom: 10px;
 }
 
-.slides{
-    width: 500%;
-    height: 300px;
-    display: flex;
-}
-
-.slide-img{
-    display: flex;
+.slider-main{
     width: 100%;
-}
-
-.slides input{
-    display: none;
-}
-
-.slide{
-    width: 20%;
-    transition: 2s;
-}
-
-.slide img{
-    border-radius: 10px;
-    width: 100%;
-    height: 300px;
-}
-
-/* css for manual slider navigation */
-
-.navigation-manual{
-    width: 100%;
-    margin-top: -40px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    
 }
 
-.manual-btn{
-    border: 2px solid var(--primary-color);
+.img-description{
+    width: 95%;
+    height: 400px;
+    background-size: cover;
+}
+
+.slider-sub{
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+#container-img{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    transition: all 0.2s linear;
+}
+
+.img-sub{
+    width: 100%;
+    margin: 0px;
+    height: 70px;
+    padding: 0 5px;
+    flex: 1;
+    transition: all 0.2s linear;
+}
+
+.img-sub.active{
+    border: 1px solid var(--primary-color);
     padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
 }
 
-
-.manual-btn:not(:last-child){
-    margin-right: 40px;
-}
-
-.manual-btn:hover{
-    background: var(--primary-color);
-}
-
-/* share */
-
-.share{
-    text-align: center;
-    z-index: 1000;
-    top: 0;
-    font-size: 2rem;
-    display: flex;
-    margin-top: 20%;
+.icon-des{
+    display: block;
+    font-size: 20px;
+    padding: 10px;
     width: 100%;
-    justify-content: space-between;
+    margin: 0;
 }
 
-.share-title{
-    font-size: 2.5rem;
-    display: flex;
-    align-items: center;
+.icon-des:hover{
+    background-color: #ccc;
 }
 
-.share-title span{
-    margin-right: 16px;
-    font-size: 2rem;
+.code-room{
+    text-align: center;
+    font-size: 30px;
 }
 
-.share-icon, .like-icon{
-    display: flex;
-    align-items: center;
-    font-size: 2.3rem;
-}
-
-.fa-facebook{
-    color: #3B5998;
-}
-
-.fa-square-instagram{
-    color: #833AB4;
-}
-
-.fa-facebook-messenger{
-    color: #FF0099;
-}
-
-.like{
-    font-size: 2.5rem;
-    margin-right: 16px;
-    color: red;
-    padding: 10px;
-    box-shadow: 2px 2px 5px #ccc;
-    border-radius: 40%;
-    transition: all 0.2s linear;
-}
-
-.share-icon-item{
-    transition: all 0.2s linear;
-}
-
-.share-icon-item:not(:last-child){
-    margin-right: 16px;
-}
-
-.share-icon-item-link{
-    text-decoration: none;
-    border-radius: 40%;
-    padding: 10px;
-    box-shadow: 2px 2px 5px #ccc;
-}
-
-.share-icon-item:hover, .like:hover{
-    transform: translateY(-10%);
-}
-
-
-.active-like{
-    display: flex;
-    align-items: center;
-}
-
-/* product-btn */
-
-.buy-product{
-    width: 50%;
+.information-room-detail{
     display: flex;
     justify-content: center;
-    font-size: 1.6rem;
-    padding: 20px;
-    position: absolute;
-    bottom: 5%;
-    right: 0;
+    flex-wrap: wrap;
 }
 
-.add-cart{
-    margin-right: 32px;
+.infor-item{
+    padding: 10px 5px;
+    width: 50%;
+    box-shadow: 3px 3px 3px #ccc;
 }
 
-.btn-item{
-    font-size: 1.8rem;
-    min-width: 150px;
-    padding: 20px  0;
+.title-infor{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.sub-title{
+    padding: 10px 0;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/* add to cart */
+
+.add-to-cart{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.btn-des{
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    transition: all 0.1s linear;
+    border-radius: 5px;
     background-color: var(--primary-color);
-    color: var(--white-color);
-    border-radius: 10px;
-    text-align: center;
-    cursor: pointer;
 }
 
-.btn-item:hover{
-    background-color: #ed5c3f;
+.btn-des:hover{
+    background-color: #ff9f00;
+    color: #fff;
 }
 
-.number-like{
-    font-size: 1.9rem;
-}
 
-/* close */
 .close{
-    text-align: center;
-    z-index: 1000;
-    font-size: 2rem;
-    width: 100%;
-    margin-top: 38px;
+    font-size: 30px;
+    position: absolute;
+    margin-right: 20px;
+    right: 0;
+    top: 0;
+    margin-top: 20px;
 }
 
-.close span{
-    color: var(--white-color);
-    padding: 18px ;
-    border-radius: 10px;
-    width: 150px;
-    background-color: var(--primary-color);
-    box-shadow: 2px 2px 5px #ccc;
-    cursor: pointer;
+.close:hover{
+    color: var(--primary-color);
 }
 
-.close span:hover{
-    background-color: #ed5c3f;
+.price-des{
+    font-size: 16px;
+    padding-top: 20px;
+}
+
+.price{
+    font-size: 20px;
+    color: var(--primary-color);
 }
 
 
-@keyframes modalFadeIn {
-    from{
-        transform: translateY(-50px);
-    }
-    to{
-        transform: translateY(0);
-    }
-}
+
+
+

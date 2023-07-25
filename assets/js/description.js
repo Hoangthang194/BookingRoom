@@ -1,235 +1,357 @@
+
 const activeDes = document.querySelector('.container-modal')
 const description = {
     modals: [
         {
-            code:"D601",
+            id:"D601",
             img1:"assets/img/Directview/D601/20210409_141832.jpg",
             img2:"assets/img/Directview/D601/20210409_141859.jpg",
             img3:"assets/img/Directview/D601/20210409_142022.jpg",
             img4:"assets/img/Directview/D601/20210409_142102.jpg",
         },
         {
-            code:"D1207",
+            id:"D1207",
             img1:"assets/img/Directview/D1207/1.jpg",
             img2:"assets/img/Directview/D1207/2.jpg",
             img3:"assets/img/Directview/D1207/3.jpg",
             img4:"assets/img/Directview/D1207/4.jpg",
         },
         {
-            code:"D1501",
+            id:"D1501",
             img1:"assets/img/Directview/D1501/1.jpg",
             img2:"assets/img/Directview/D1501/2.jpg",
             img3:"assets/img/Directview/D1501/3.jpg",
             img4:"assets/img/Directview/D1501/4.jpg",
         },
         {
-            code:"B1210",
+            id:"B1210",
             img1:"assets/img/Seaview/B1210/1.jpg",
             img2:"assets/img/Seaview/B1210/2.jpg",
             img3:"assets/img/Seaview/B1210/3.jpg",
             img4:"assets/img/Seaview/B1210/4.jpg",
         },
         {
-            code:"B1216",
+            id:"B1216",
             img1:"assets/img/Seaview/B1216/1.jpg",
             img2:"assets/img/Seaview/B1216/2.jpg",
             img3:"assets/img/Seaview/B1216/3.jpg",
             img4:"assets/img/Seaview/B1216/4.jpg",
         },
         {
-            code:"C1524",
+            id:"C1524",
             img1:"assets/img/Cityview/C1524/1.jpg",
             img2:"assets/img/Cityview/C1524/2.jpg",
             img3:"assets/img/Cityview/C1524/3.jpg",
             img4:"assets/img/Cityview/C1524/4.jpg",
         },
         {
-            code:"C1619",
+            id:"C1619",
             img1:"assets/img/Cityview/C1619/1.jpg",
             img2:"assets/img/Cityview/C1619/2.jpg",
             img3:"assets/img/Cityview/C1619/3.jpg",
             img4:"assets/img/Cityview/C1619/4.jpg",
         },
         {
-            code:"C1720",
+            id:"C1720",
             img1:"assets/img/Cityview/C1720/1.jpg",
             img2:"assets/img/Cityview/C1720/2.jpg",
             img3:"assets/img/Cityview/C1720/3.jpg",
             img4:"assets/img/Cityview/C1720/4.jpg",
         },
         {
-            code:"C1824",
+            id:"C1824",
             img1:"assets/img/Cityview/C1824/1.jpg",
             img2:"assets/img/Cityview/C1824/2.jpg",
             img3:"assets/img/Cityview/C1824/3.jpg",
             img4:"assets/img/Cityview/C1824/4.jpg",
         },
         {
-            code:"C2221",
+            id:"C2221",
             img1:"assets/img/Cityview/C2221/1.jpg",
             img2:"assets/img/Cityview/C2221/2.jpg",
             img3:"assets/img/Cityview/C2221/3.jpg",
             img4:"assets/img/Cityview/C2221/4.jpg",
         },
         {
-            code:"C2421",
+            id:"C2421",
             img1:"assets/img/Cityview/C2421/1.jpg",
             img2:"assets/img/Cityview/C2421/2.jpg",
             img3:"assets/img/Cityview/C2421/3.jpg",
             img4:"assets/img/Cityview/C2421/4.jpg",
         },
         {
-            code:"C2722",
+            id:"C2722",
             img1:"assets/img/Cityview/C2722/1.png",
             img2:"assets/img/Cityview/C2722/2.jpg",
             img3:"assets/img/Cityview/C2722/3.jpg",
             img4:"assets/img/Cityview/C2722/4.jpg",
         },
         {
-            code:"B1717",
+            id:"B1717",
             img1:"assets/img/Seaview/B1717/1.jpg",
             img2:"assets/img/Seaview/B1717/2.jpg",
             img3:"assets/img/Seaview/B1717/3.jpg",
             img4:"assets/img/Seaview/B1717/4.jpg",
         },
         {
-            code:"B1716",
+            id:"B1716",
             img1:"assets/img/Seaview/B1716/1.jpg",
             img2:"assets/img/Seaview/B1716/2.jpg",
             img3:"assets/img/Seaview/B1716/3.jpg",
             img4:"assets/img/Seaview/B1716/4.jpg",
         },
         {
-            code:"B1816",
+            id:"B1816",
             img1:"assets/img/Seaview/B1816/1.jpg",
             img2:"assets/img/Seaview/B1816/2.jpg",
             img3:"assets/img/Seaview/B1816/3.jpg",
             img4:"assets/img/Seaview/B1816/4.jpg",
         },
         {
-            code:"C2119",
-            img1:"assets/img/Cityview/C2119/1.jpg",
-            img2:"assets/img/Cityview/C2119/2.jpg",
-            img3:"assets/img/Cityview/C2119/3.jpg",
-            img4:"assets/img/Cityview/C2119/4.jpg",
+            id:"C2119",
+            img1:"assets/img/Cityview/C2119/4.jpg",
+            img2:"assets/img/Cityview/C2119/6.jpg",
+            img3:"assets/img/Cityview/C2119/7.jpg",
+            img4:"assets/img/Cityview/C2119/8.jpg",
         },
         {
-            code:"C1719",
+            id:"C1719",
             img1:"assets/img/Cityview/C1719/1.jpg",
             img2:"assets/img/Cityview/C1719/2.jpg",
             img3:"assets/img/Cityview/C1719/3.jpg",
             img4:"assets/img/Cityview/C1719/4.jpg",
         },
     ],
+    handleSlider: function(){
+        const nextBtn = document.querySelector('.next-btn');
+        const preBtn = document.querySelector('.pre-btn');
+        let lists = document.querySelectorAll('.img-sub');
+        lists[0].classList.add('active');
+        nextBtn.onclick = ()=>{
+                let lists = document.querySelectorAll('.img-sub');
+                document.getElementById('container-img').appendChild(lists[0]);
+                let lists2 = document.querySelectorAll('.img-sub');
+                lists2[0].classList.add('active');
+                for(let i = 1; i <= 3; i++){
+                    lists2[i].classList.remove('active');
+                }
+                let html = `
+                <img src="${lists2[0].src}" alt="" class="img-description slide-1">
+                `
+                document.querySelector('.slider-main').innerHTML = html
+        }
+        preBtn.onclick = () => {
+                let lists = document.querySelectorAll('.img-sub');
+                document.getElementById('container-img').prepend(lists[3]);
+                let lists2 = document.querySelectorAll('.img-sub');
+                lists2[0].classList.add('active');
+                for(let i = 1; i <= 3; i++){
+                    lists2[i].classList.remove('active');
+                }
+                let html = `
+                <img src="${lists2[0].src}" alt="" class="img-description slide-1">
+                `
+                document.querySelector('.slider-main').innerHTML = html
+        }
+    },
     render: function(){
-        const inputBtns = document.querySelectorAll('.radio-btn');
 
 // handle modal
-
         const itemBtns = $$('.home-product-item')
-        const mainDes = $('.main-des')
-        const slideImg = $('.slide-img')
-        const close = $('.close')
+        const mainDes = $('.description-information')
+        const slideImg = $('.slider')
 
         for(var itemBtn of itemBtns){
             itemBtn.onclick = (e) => {
                 var closest = e.target.closest('.home-product-item');
                 homeProduct.products.map(function(product){
-                    if(product.code == closest.getAttribute('value')){
+                    if(product.id == closest.getAttribute('value')){
                         activeDes.classList.add("active")
                         description.modals.map(function(modal){
-                            if(modal.code == product.code){
+                            if(modal.id == product.id){
                                 var htmls1 = `
-                                <div class="slide first">
-                                            <img src="${modal.img1}" alt="">
+                                <div class="slider-main">
+                            <img src="${modal.img1}" alt="" class="img-description slide-1">
+                        </div>
+
+
+                        <div class="slider-sub row">
+                            <i class="fa-solid fa-angle-left icon-des pre-btn col c-1"></i>
+                            <div id="container-img">
+                            <img src="${modal.img1}" alt="" class="img-sub col c-3">
+                            <img src="${modal.img2}" alt="" class="img-sub col c-3">
+                            <img src="${modal.img3}" alt="" class="img-sub col c-3">
+                            <img src="${modal.img4}" alt="" class="img-sub col c-3">
+                            </div>
+                            
+                            <i class="fa-solid fa-angle-right icon-des next-btn col c-1"></i>
+                        </div>
+
+                            <section class="search-calendar flex">
+                                <div class="calender">
+                                    <header class="month flex">
+                                        <div class="icon-pre icon-nav">
+                                            <i class="fa-solid fa-angle-left"></i>
                                         </div>
-                                        <div class="slide">
-                                        <img src="${modal.img2}" alt="">
+                                        <div class="content">
+                                            
                                         </div>
-                                        <div class="slide">
-                                        <img src="${modal.img3}" alt="">
+                                        <div class="icon-next icon-nav">
+                                            <i class="fa-solid fa-angle-right"></i>
                                         </div>
-                                        <div class="slide">
-                                        <img src="${modal.img4}" alt="">
-                                        </div>
+                                    </header>
+                            
+                                    <article class="main-date">
+                                        <section class="weekends flex">
+                                            <div>Mo</div>
+                                            <div>Tu </div>
+                                            <div>We</div>
+                                            <div>Th</div>
+                                            <div>Fr</div>
+                                            <div>Sa</div>
+                                            <div>Su</div>
+                                        </section>
+                            
+                                        <section class="days flex">
+                                            
+                                        </section>
+                                    </article>
+                                </div>
+                                
+                                <div class="note-color">
+                                    <div class="note-item">
+                                        <div class="booked box"></div>
+                                        <div class="note-booked">Đã đặt</div>
+                                    </div>
+                                    <div class="note-item">
+                                        <div class="not-booked box"></div>
+                                        <div class="note-booked">Chưa đặt</div>
+                                    </div>
+                                </div>
                                 `
                                 slideImg.innerHTML = htmls1;
-                                const first = document.querySelector('.first')
-                                var counter = 1;
-                            setInterval(() =>{
-                                document.getElementById('radio' + counter).click();
-                                counter++;
-                                if(counter > 4){
-                                    counter = 1;
-                                }
-                                inputClick(first, inputBtns)
-                            }, 3000)
+                                // handle calendar
+                                renderCalender();
+                                document.querySelector('.icon-pre').addEventListener('click', () => {
+                                    date.setMonth(date.getMonth() - 1);
+                                    renderCalender();
+                                  })
+                                  
+                                  document.querySelector('.icon-next').addEventListener('click', () => {
+                                    date.setMonth(date.getMonth() + 1);
+                                    renderCalender();
+                                  })
+
+                                description.handleSlider();
+
                             }
                         })
                         
                         var htmls = `
-                        <div class="description-title">${product.code}</div>
-                        <div class="description-product">
-                        ⛺️Nghỉ dưỡng vui vẻ cùng CĂN GÓC ${product.code} tại NS Luxury😍.<br>
-                        🧨Nằm tại tầng ${product.floor} với căn bo góc 2 ban công cực rộng chiếm lĩnh mọi khung cảnh giữa biển và thành phố đặc biệt view thẳng đại dương💯<br>
-                        🧨Thiết kế phòng sang trọng với ${product.numberBed} phòng ngủ riêng biệt💯<br>
-                        🧨Nội thất đầy đủ với các họa tiết được trang trí hài hòa, độc đáo💯<br>
-                        👉👉Thiết kế phòng:<br>
-                        - ${product.numberBed} phòng ngủ riêng biệt với ${product.numberBed} giường cỡ lớn<br>
-                        - Số lượng: ${product.numberBed * 2} người lớn + ${product.numberBed} trẻ em<br>
-                        - Tiện nghi đầy đủ<br>
-                        👉 Đặc Biệt mỗi phòng được setup 1 trà + 1 cafe + 1 nước suối và đồ amenities cơ bản.<br>
-                        ❤🌼❤ PHÒNG<br>
-                        Phòng ngủ: ${product.numberBed} giường đôi<br>
-                        Giường: 1.8m x 2m và 1.4m x 2m<br>
-                        Phòng tắm: ${product.numberBed}<br>
-                        ❤🌼❤TIỆN NGHI<br>
-                        Tiện nghi thiết yếu<br>
-                        Điều hòa nhiệt độ<br>
-                        Bếp nấu hiện đại<br>
-                        Nhân viên hỗ trợ nhiệt tình.<br>
+                        <div class="close"><i class="fa-solid fa-rectangle-xmark"></i></div>
+                        <h1 class="code-room">${product.id}</h1>
+                            <div class="information-room-detail">
+
+                                <div class="infor-item">
+                                    <div class="title-infor">
+                                        Phục vụ
+                                    </div>
+    
+                                    <div class="sub-title">
+                                        Người lớn: ${product.numberBed * 2}<br>
+                                        Trẻ em: ${product.numberBed}<br>
+                                    </div>
+    
+                                </div>
+    
+                                <div class="infor-item">
+                                    <div class="title-infor">
+                                        Bố trí căn hộ
+                                    </div>
+    
+                                    <div class="sub-title">
+                                        Diện tích: ${product.acreage}m2<br>
+                                        Hướng view: trực diện biển<br>
+                                        Số giường:<br>
+                                        + ${product.numberBed} Super King size 2mx2m<br>
+                                        + Hoặc tách thành ${product.numberBed * 2} giường đơn<br>
+                                    </div>
+    
+                                </div>
+
+                                <div class="infor-item">
+                                    <div class="title-infor">
+                                        Bếp:
+                                    </div>
+    
+                                    <div class="sub-title">
+                                        + Bếp từ 2 lò cao cấp<br>
+                                        + Máy hút mùi cao cấp<br>
+                                        + Dụng cụ nấu: Nội cơm, nồi nấu, bát, đĩa…<br>
+                                        + Tủ lạnh<br>
+                                        + Lò vi sóng<br>
+                                    </div>
+    
+                                </div>
+    
+                                <div class="infor-item">
+                                    <div class="title-infor">
+                                        Phòng khách:
+                                    </div>
+    
+                                    <div class="sub-title">
+                                        + Sofa<br>
+                                        + Bàn trà<br>
+                                    </div>
+    
+                                </div>
+    
+                                <div class="infor-item">
+                                    <div class="title-infor">
+                                        Phòng tắm:<br>
+                                    </div>
+    
+                                    <div class="sub-title">
+                                        + Vách tắm đứng<br>
+                                        + Khăn tắm<br>
+                                        + Dầu gội xả, bàn chải răng<br>
+                                    </div>
+    
+                                </div>
+    
+                                <div class="infor-item">
+                                    <div class="title-infor">
+                                        Tiện ích khác:<br>
+                                    </div>
+    
+                                    <div class="sub-title">
+                                        + Tivi<br>
+                                        + Wifi<br>
+                                        + Ban công view trực diện biển – đại dương cực hướng ban công mát, đẹp nhất<br>
+                                    </div>
+                            </div>
+                            <div class = "price-des">Giá mỗi đêm: <span class ="price"> ${homeProduct.pricecur(product)} VNĐ</span></div>
                         </div>
+                                
                         `
                         mainDes.innerHTML = htmls;             
-                        cart.hadleCart(product,product.code);
+                        cart.hadleCart(product,product.id);
+                        const close = $('.close')
+                        close.onclick = () => {
+                            activeDes.classList.remove('active')
+                        }
                     }
                 })
             }
         }
 
-        close.onclick = () => {
-            activeDes.classList.remove('active')
-        }
-
 
     }
-}
-
-
-function inputClick(first, inputBtns){
-    for(var inputBtn of inputBtns ){
-        if(inputBtn.id == "radio1"){
-            inputBtn.onclick = () => {
-                first.style = "margin-left: 0%"
-            }
-        }
-        else if(inputBtn.id == "radio2"){
-            inputBtn.onclick = () => {
-                first.style = "margin-left: -20%"
-            }
-        }
-        else if(inputBtn.id == "radio3"){
-            inputBtn.onclick = () => {
-                first.style = "margin-left: -40%"
-            }
-        }
-        else{
-            inputBtn.onclick = () => {
-                first.style = "margin-left: -60%"
-            }
-        }
     }
-    }
+
+    description.render();
+
+    
 
 
 

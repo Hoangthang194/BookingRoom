@@ -10,7 +10,7 @@ const cart = {
         <img src="${product.img}" alt="" class="header__cart-img">
         <div class="header__cart-item-info">
         <div class="header__cart-item-head">
-                <h5 class="header__cart-item-name">${product.code}</h5>
+                <h5 class="header__cart-item-name">${product.id}</h5>
                 <div class="header__cart-item-price-wrap">
                 <span class="header__cart-item-price">${homeProduct.pricecur(product)}đ</span>
                 </div>
@@ -19,7 +19,6 @@ const cart = {
                 <span class="header__cart-item-description">
                     Phân loại: ${product.numberBed} giường
                 </span>
-                <span class="header__cart-item-remove">Xóa</span>
         </div>
         </div>
         </li>
@@ -39,13 +38,13 @@ const cart = {
         headerCart.innerHTML = data;
     },
 
-    hadleCart: function(product,code){
+    hadleCart: function(product,id){
         const _this = this;
         addCart.onclick = function(){
             _this.render(product);
             _this.setLocal(cartArray);
             _this.getLocal();
-            notification.handleAdd(product,code)
+            notification.handleAdd(product,id)
             alert('Thêm vào giỏ thành công')
             _this.countNumber();
         }
@@ -55,7 +54,7 @@ const cart = {
             _this.render(product);
             _this.setLocal(cartArray);
             _this.getLocal();
-            notification.handleAdd(product,code)
+            notification.handleAdd(product,id)
             _this.countNumber();
             viewCart.click();
         }
@@ -66,7 +65,6 @@ const cart = {
         var domParse = new DOMParser();
         var docs = domParse.parseFromString(data, "text/html");
         var number = docs.querySelectorAll('.header__cart-item')
-        console.log(number.length)
         numberProduct.innerHTML = `${number.length}`
     }
 }

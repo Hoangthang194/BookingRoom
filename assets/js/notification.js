@@ -6,13 +6,13 @@ var data = JSON.parse(getJSON);
 var arrayNotify = [data];
 const viewCart = $('.header__cart-view-cart');
 const  notification = {
-    addNotify: function(product,code, state) {
+    addNotify: function(product,id, state) {
         var textNotify = `
         <li class="header__notify-item header__notify-item--viewed">
         <a href="cart.html" class="header__notify-link">
             <img src="${product.img}" alt="" class="header__notify-img">
             <div class="header__notify-info">
-                <span class="header__notify-name">${code} đã được ${state}</span>
+                <span class="header__notify-name">${id} đã được ${state}</span>
                 <span class="header__notify-description">${product.title}</span>
             </div>
         </a>
@@ -43,13 +43,13 @@ const  notification = {
         localStorage.setItem('STATE', json);
     },
 
-    handleAdd: function(product, code){
-            notification.start(product, code, 'đã thêm vào giỏ')
+    handleAdd: function(product, id){
+            notification.start(product, id, 'đã thêm vào giỏ')
             notification.getLocal()
             notification.changeState()
     },
-    start: function(product, code, state){
-        this.addNotify(product, code, state)
+    start: function(product, id, state){
+        this.addNotify(product, id, state)
         this.render();
     }
 }
