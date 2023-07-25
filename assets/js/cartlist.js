@@ -206,4 +206,3 @@ btnBuy.addEventListener('click', () => {
         }
     }
 })
-

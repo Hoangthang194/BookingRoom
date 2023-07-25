@@ -453,9 +453,3 @@ function sortPrice(datas, products){
         resolve(output);
     })
 }
-
-
-
-
-
-

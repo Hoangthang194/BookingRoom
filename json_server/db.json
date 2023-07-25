@@ -1,64 +1,64 @@
 {
-  "products": [
-    {
-      "floor": "21",
-      "id": "C2119",
-      "img": "../assets/img/Cityview/C2119/4.jpg",
-      "checkin": "",
-      "checkout": "",
-      "numberBed": 2,
-      "title": "View thành phố 2 giường lớn m8 x 2m tối đa 4 người lớn và 2 trẻ em",
-      "acreage": 65,
-      "priceold": "2000000",
-      "favourite": true,
-      "rating": 4,
-      "state": "Còn trống",
-      "saleoff": "9%"
-    },
-    {
-      "floor": "15",
-      "id": "C1524",
-      "img": "../assets/img/Cityview/C1524/3.jpg",
-      "checkin": "",
-      "checkout": "",
-      "numberBed": 2,
-      "title": "View thành phố 2 giường lớn m8 x 2m tối đa 4 người lớn và 2 trẻ em",
-      "acreage": 65,
-      "priceold": "900000",
-      "favourite": true,
-      "rating": 4,
-      "state": "Còn trống",
-      "saleoff": "10%"
-    },
-    {
-      "floor": "17",
-      "id": "C1719",
-      "img": "../assets/img/Cityview/C1719/1.jpg",
-      "checkin": "",
-      "checkout": "",
-      "numberBed": 2,
-      "title": "View thành phố 2 giường lớn m8 x 2m tối đa 4 người lớn và 2 trẻ em",
-      "acreage": 65,
-      "priceold": "2100000",
-      "favourite": true,
-      "rating": 4,
-      "state": "Còn trống",
-      "saleoff": "8%"
-    },
-    {
-      "floor": "17",
-      "id": "C1719",
-      "img": "../assets/img/Cityview/C1719/1.jpg",
-      "checkin": "",
-      "checkout": "",
-      "numberBed": 2,
-      "title": "View thành phố 2 giường lớn m8 x 2m tối đa 4 người lớn và 2 trẻ em",
-      "acreage": 65,
-      "priceold": "2100000",
-      "favourite": true,
-      "rating": 4,
-      "state": "Còn trống",
-      "saleoff": "8%"
-    }
-  ]
-}
+    "products": [
+      {
+        "floor": "21",
+        "id": "C2119",
+        "img": "../assets/img/Cityview/C2119/4.jpg",
+        "checkin": "",
+        "checkout": "",
+        "numberBed": 2,
+        "title": "View thành phố 2 giường lớn m8 x 2m tối đa 4 người lớn và 2 trẻ em",
+        "acreage": 65,
+        "priceold": "2000000",
+        "favourite": true,
+        "rating": 4,
+        "state": "Còn trống",
+        "saleoff": "9%"
+      },
+      {
+        "floor": "15",
+        "id": "C1524",
+        "img": "../assets/img/Cityview/C1524/3.jpg",
+        "checkin": "",
+        "checkout": "",
+        "numberBed": 2,
+        "title": "View thành phố 2 giường lớn m8 x 2m tối đa 4 người lớn và 2 trẻ em",
+        "acreage": 65,
+        "priceold": "900000",
+        "favourite": true,
+        "rating": 4,
+        "state": "Còn trống",
+        "saleoff": "10%"
+      },
+      {
+        "floor": "17",
+        "id": "C1719",
+        "img": "../assets/img/Cityview/C1719/1.jpg",
+        "checkin": "",
+        "checkout": "",
+        "numberBed": 2,
+        "title": "View thành phố 2 giường lớn m8 x 2m tối đa 4 người lớn và 2 trẻ em",
+        "acreage": 65,
+        "priceold": "2100000",
+        "favourite": true,
+        "rating": 4,
+        "state": "Còn trống",
+        "saleoff": "8%"
+      },
+      {
+        "floor": "17",
+        "id": "C1719",
+        "img": "../assets/img/Cityview/C1719/1.jpg",
+        "checkin": "",
+        "checkout": "",
+        "numberBed": 2,
+        "title": "View thành phố 2 giường lớn m8 x 2m tối đa 4 người lớn và 2 trẻ em",
+        "acreage": 65,
+        "priceold": "2100000",
+        "favourite": true,
+        "rating": 4,
+        "state": "Còn trống",
+        "saleoff": "8%"
+      }
+    ]
+  }
